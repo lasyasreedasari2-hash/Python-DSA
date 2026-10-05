@@ -1,0 +1,22 @@
+def binarysearch(a,el):
+  l=0
+  r=len(a)-1
+  while l<r:
+    m=(l+r)//2
+    if a[m]==el:
+      return m
+    elif l==m:
+      return -1
+    elif a[m]<el:#ignore left part
+      l=m
+    else:
+      r=m
+#return -1
+
+a=[1,2,3,4,5,6,7,8,9]
+print(binarysearch(a,10))
+
+
+#m=(l+r)//2
+#e=m+1 ignoring right part
+#r=m-1 ignoring left part
